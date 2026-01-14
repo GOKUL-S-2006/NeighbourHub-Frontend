@@ -1,51 +1,117 @@
-# NeighbourHub-Backend
-NeighbourHub is a community-centric issue reporting platform that enables residents to report local problems such as road damage and view the most critical issues based on AI-assisted prioritization.
-This repository contains the backend service built using Node.js, Express, MongoDB, and Firebase Authentication.
+🏘️ NeighbourHub – Frontend
 
-🚀 Features
+NeighbourHub is a community-driven issue reporting platform where users can report local problems, upvote issues, and track their resolution status.
+This repository contains the frontend built using React + Vite, designed for both users and admins.
 
-User authentication using Firebase Auth
+🚀 Tech Stack
 
-REST APIs for reporting and managing local issues
+⚛️ React (with Hooks)
 
-AI-assisted issue prioritization based on:
+⚡ Vite (fast dev environment)
 
-Community upvotes
+🌐 Axios / Fetch API (API communication)
 
-Time since issue was reported
+🎨 CSS / Tailwind (optional, extendable)
 
-Presence of image proof
+🔐 JWT-based Authentication
 
-Severity analysis from issue description
+🧭 React Router DOM
 
-Location-based issue filtering
+✨ Features
+👤 User Features
 
-Admin controls for issue status updates
+Register & Login
 
-🧠 AI-Assisted Prioritization (Core Logic)
+Create new issues (title, description, category, location)
 
-Each reported issue is assigned a priority score, which determines its visibility order in the feed.
+View all reported issues
 
-Priority Score Factors:
+Upvote issues (1 vote per user)
 
-Number of upvotes
+Track issue status (Open / In Progress / Resolved)
 
-Issue age (older unresolved issues get higher priority)
+View issues created by the logged-in user
 
-Image presence (adds credibility)
+🛠️ Admin Features
 
-Severity keywords detected from description (AI-lite NLP)
+Admin Dashboard with analytics
 
-Issues with higher priority scores appear at the top.
+View total issues, users, votes
 
-🛠️ Tech Stack
+Change issue status (Open → In Progress → Resolved)
 
-Node.js
+Delete any issue
 
-Express.js
+Full moderation control
 
-MongoDB + Mongoose
+📂 Project Structure
+src/
+│
+├── components/        # Reusable UI components
+├── pages/             # Pages (Login, Register, Dashboard, AdminDashboard)
+├── services/          # API calls
+├── utils/             # Auth helpers
+├── App.jsx            # Main app & routing
+├── main.jsx           # Entry point
 
-Firebase Authentication
+🔗 Backend Integration
 
-REST API architecture
+This frontend connects to the NeighbourHub Backend (Node.js + Express + MongoDB).
+
+Environment Variable
+
+Create a .env file in root:
+
+VITE_API_BASE_URL=http://localhost:5000/api
+
+▶️ Getting Started
+1️⃣ Install dependencies
+npm install
+
+2️⃣ Start development server
+npm run dev
+
+
+App will run at:
+
+http://localhost:5173
+
+🔐 Authentication Flow
+
+JWT token stored in localStorage
+
+Token attached in Authorization header
+
+Role-based UI (Admin vs User)
+
+Protected routes for admin dashboard
+
+📊 Admin Dashboard Metrics
+
+Total Issues
+
+Open / In-Progress / Resolved issues
+
+Total Users
+
+Total Votes
+
+🧠 Future Enhancements
+
+Comments on issues
+
+Image upload
+
+Search & filter issues
+
+Notifications
+
+Mobile responsive UI
+
+Role-based route guards
+
+👨‍💻 Author
+
+Gokul S
+Frontend + Backend Developer
+Project built for learning full-stack MERN architecture with real-world patterns.
