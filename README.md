@@ -1,16 +1,51 @@
-# React + Vite
+# NeighbourHub-Backend
+NeighbourHub is a community-centric issue reporting platform that enables residents to report local problems such as road damage and view the most critical issues based on AI-assisted prioritization.
+This repository contains the backend service built using Node.js, Express, MongoDB, and Firebase Authentication.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
 
-Currently, two official plugins are available:
+User authentication using Firebase Auth
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+REST APIs for reporting and managing local issues
 
-## React Compiler
+AI-assisted issue prioritization based on:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Community upvotes
 
-## Expanding the ESLint configuration
+Time since issue was reported
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Presence of image proof
+
+Severity analysis from issue description
+
+Location-based issue filtering
+
+Admin controls for issue status updates
+
+🧠 AI-Assisted Prioritization (Core Logic)
+
+Each reported issue is assigned a priority score, which determines its visibility order in the feed.
+
+Priority Score Factors:
+
+Number of upvotes
+
+Issue age (older unresolved issues get higher priority)
+
+Image presence (adds credibility)
+
+Severity keywords detected from description (AI-lite NLP)
+
+Issues with higher priority scores appear at the top.
+
+🛠️ Tech Stack
+
+Node.js
+
+Express.js
+
+MongoDB + Mongoose
+
+Firebase Authentication
+
+REST API architecture
